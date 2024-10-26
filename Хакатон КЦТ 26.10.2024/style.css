@@ -125,7 +125,7 @@ header .header_button {
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     transform-origin: 50% 100%;
-    transition: 900ms;
+    transition: 2s;
 }
 
 .mockup.opened .part .top {
@@ -161,20 +161,48 @@ header .header_button {
     transform: translate3d(0, 0, 1px);
 }
 
-.firstFrame img {
-    border-radius: 6px;
+.firstFrame .slids {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
 }
 
+.slids img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 500ms ease-in-out;
+}
 
-.arrow{
-    position: relative;
-    left: 105%;
-    top: -50%;
+.slids .active {
+    opacity: 1;
+}
+
+.arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.arrowRight {
+    position: absolute;
+    right: -20%;
+    order: 2;
+}
+
+.arrowLeft {
+    position: absolute;
+    left: -20%;
+    order: 1;
 }
 
 .arrow img {
     cursor: pointer;
-    position: relative;
     width: 65px;
 }
 
@@ -247,6 +275,7 @@ header .header_button {
     flex-direction: row;
     gap: 0.5rem;
     justify-content: center;
+    padding-top: 100px;
 }
 
 .div-about-1 {
@@ -265,6 +294,50 @@ header .header_button {
     height: 292px;
     background: #3F3F3F;
     box-shadow: 10px 5px 5px;
+}
+
+.div-about-group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 625px;
+    height: 318px;
+    background: #3F3F3F;
+    box-shadow: 10px 5px 5px;
+}
+
+.of-two-block {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.orange-block {
+    width: 1297px;
+    height: 223px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #FF6600CC;
+}
+
+.huge-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+}
+
+.group-photo {
+    width: 625px; 
+    height: 242px; 
+    object-fit: cover;
 }
 
 
